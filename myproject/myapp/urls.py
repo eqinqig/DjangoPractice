@@ -7,4 +7,5 @@ urlpatterns = [
     path('form', views.hello_form, name='hello_form'),
     path('student_list', views.student_list, name='student_list'),
     path('student_add', views.student_add, name='student_add'),
+    path('sub_string', views.sub_string, name='sub_string'),
 ]

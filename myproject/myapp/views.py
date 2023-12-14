@@ -58,3 +58,15 @@ def student_add(request):
     # 创建一个新的学生对象
 
 
+def sub_string(request):
+    my_string = request.GET.get('origin_string')
+    start = request.GET.get('start')
+    stop = request.GET.get('stop')
+    m = int(start)
+    n = int(stop)
+
+    if my_string and start and stop:
+        sub_str = my_string[m:n]
+        return HttpResponse(sub_str)
+    else:
+        return HttpResponse("Incorrect string and start, stop")
